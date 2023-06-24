@@ -39,7 +39,7 @@ public class Main {
 		System.out.println("Mês do ano : " + (calendar.get(Calendar.MONTH) + 1));
 		System.out.println("Calendar  formatado :"+sdf.format(calendar.getTime()));
 
-		System.out.println("acabou");
+		System.out.println("acabou o programa");
 	}
 
 }
