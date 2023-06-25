@@ -1,28 +1,28 @@
 package treinoAulaJava2.application;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
-import java.util.Calendar;
-import java.util.Date;
+import java.time.Duration;
+import java.time.Instant;
 
 public class Main {
 
-	public static void main(String[] args) throws ParseException {
+	public static void main(String[] args) throws ParseException, InterruptedException {
 
-	DateTimeFormatter dtf  =  DateTimeFormatter.ofPattern("dd/MM/yyyy");
-	LocalDate ld = LocalDate.parse("25/06/2023",dtf);
+		Instant instInicial = Instant.now();
+
+		Thread.sleep(2000);/*pode ser usado para ver a duração de um processo qualquer que nao conhecemos*/
+
+		Instant instFinal = Instant.now();
+
 		
-	System.out.println("Data atual : "+ld.format(dtf));
-	System.out.println("Dia da semana : "+ld.getDayOfMonth());
-	System.out.println("Ano : "+ld.getYear());
-	System.out.println("menos 10 anos : "+ld.minusYears(10));
+		Duration dur = Duration.between(instInicial, instFinal);
+		
+		System.out.println("Duração entre nano segundos :"+dur.toNanos());
+		System.out.println("Duração em horas : " +dur.toHours());
+		System.out.println("Duração em mili segundos"+dur.toMillis());
+		System.out.println("Duração em minutos : "+dur.toMinutes());
+		
 
-
-	
 	}
 
 }
