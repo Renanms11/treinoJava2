@@ -11,22 +11,18 @@ public class Main {
 
 	public static void main(String[] args) throws ParseException, InterruptedException {
 
-	LocalDate dataAntiga = LocalDate.of(2020,2,7);
-		
-	LocalDate dataNova = LocalDate.of(2023,5,17);
-	
-	 System.out.println("Data antiga é depois da data nova : "+ dataAntiga.isAfter(dataNova));
-	 System.out.println("Data antiga é antes da data nova : "+ dataAntiga.isBefore(dataNova));
-	 System.out.println("as Datas são iguais  : "+ dataAntiga.isEqual(dataNova));
-	 Period periodo = Period.between(dataAntiga, dataNova);
-	 
-	 System.out.println("Periodo entre as datas em meses : " + periodo.getMonths());
-	 System.out.println("Periodo entre as datas em dias : " + periodo.getDays());
-	 System.out.println("Periodo entre as datas em anos : " + periodo.getYears());
-	 
-	 System.out.println("periodo total : " + periodo.getYears()+" Anos "+
-						periodo.getMonths()+" Meses " + periodo.getDays()+" Dias");
+		LocalDate dataBase = LocalDate.parse("2019-10-11");
 
+		System.out.println("Mais 5 dias : " + ( dataBase = dataBase.plusDays(5)));
+		System.out.println("Mais 5 anos : " + ( dataBase = dataBase.plusYears(5)));
+		System.out.println("Mais 4 semanas : " + ( dataBase = dataBase.plusWeeks(4)));
+		System.out.println("Mais 2 meses : " + ( dataBase = dataBase.plusMonths(2)));
+		
+		System.out.println("Menos 1 ano : " + ( dataBase = dataBase.minusYears(1)));
+
+		System.out.println("Menos 1 mes : " + ( dataBase = dataBase.minusMonths(1)));
+		System.out.println("Menos 2 dias : " + ( dataBase = dataBase.minusDays(2)));
+		System.out.println("Menos 3 semanas : " + ( dataBase = dataBase.minusWeeks(3)));
 
 
 	}
