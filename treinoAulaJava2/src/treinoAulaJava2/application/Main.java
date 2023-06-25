@@ -3,6 +3,8 @@ package treinoAulaJava2.application;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
@@ -11,17 +13,16 @@ public class Main {
 
 	public static void main(String[] args) throws ParseException {
 
-		Date dataInicial = new SimpleDateFormat("dd/MM/yyyy").parse("10/04/2021");
-
-		Calendar calendar = Calendar.getInstance();
-		calendar.setTime(dataInicial);
+	DateTimeFormatter dtf  =  DateTimeFormatter.ofPattern("dd/MM/yyyy");
+	LocalDate ld = LocalDate.parse("25/06/2023",dtf);
 		
-		for(int i = 1 ; i<= 12;i++) {
-			calendar.add(Calendar.MONTH, 1);
-			System.out.println("Parcela de número : " + i +" Vencimento é em : " + 
-			    new SimpleDateFormat("dd/MM/yyyy").format(calendar.getTime()));
-		}
+	System.out.println("Data atual : "+ld.format(dtf));
+	System.out.println("Dia da semana : "+ld.getDayOfMonth());
+	System.out.println("Ano : "+ld.getYear());
+	System.out.println("menos 10 anos : "+ld.minusYears(10));
 
+
+	
 	}
 
 }
