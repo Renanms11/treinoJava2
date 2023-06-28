@@ -2,6 +2,10 @@ package arquivos;
 
 public class Pessoa {
 
+	@Override
+	public String toString() {
+		return "Pessoa [nome=" + nome + ", idade=" + idade + ", email=" + email + "]";
+	}
 	private String nome;
 	private int idade ;
 	private String email;
