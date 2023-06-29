@@ -20,7 +20,7 @@ public class Arquivos {
 		listaP.add(pessoa3);
 
 
-		File arquivo = new File("C:\\Users\\renan\\git\\repository2\\treinoAulaJava2\\src\\arquivos\\arquivo.txt");
+		File arquivo = new File("C:\\Users\\renan\\git\\repository2\\treinoAulaJava2\\src\\arquivos\\arquivo.csv");
 
 		if (!arquivo.exists()) {
 			arquivo.createNewFile();
