@@ -56,13 +56,7 @@ public class ApachePoi2 {
 		   Cell cellEmail= linha.createCell(cell++);
 		   cellEmail.setCellValue(p.getEmail());
 		   
-		if(p.getNome().equals("Renan Miranda Sena")) {
-			  Cell cellE= linha.createCell(cell++);
-			   cellE.setCellValue("Você é baranga");
-		}else {
-			  Cell cellE= linha.createCell(cell++);
-			   cellE.setCellValue("Você é genial");
-		}
+		
 		
 			
 		}
