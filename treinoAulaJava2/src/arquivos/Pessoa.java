@@ -9,6 +9,10 @@ public class Pessoa {
 	private String nome;
 	private int idade ;
 	private String email;
+	
+	public Pessoa() {
+		
+	}
 	public Pessoa(String nome, int idade, String email) {
 		super();
 		this.nome = nome;
